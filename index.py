@@ -9,8 +9,8 @@ defaultencoding = 'utf-8'
 
 @app.route("/testimage",methods=['GET','POST'])
 def testimage():
-    img =base64.b64decode(request.form.get("image"))     #队base64进行解码还原。
-    with open("static/recognition.jpg","wb") as f:   #存入图片，存入地址为服务器中的项目地址。
+    img = base64.b64decode(request.form.get("image"))       #队base64进行解码还原。
+    with open("static/recognition.jpg","wb") as f:          #存入图片，存入地址为服务器中的项目地址。
         f.write(img)
     res = ''
     res = detect2.main()
