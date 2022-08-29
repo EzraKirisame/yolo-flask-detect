@@ -14,12 +14,6 @@ def testimage():
         f.write(img)
     res = ''
     res = detect2.main()
-    #img = cv2.imread("static/recognition.jpg")
-
-    #cv2.imshow('show',img)
-    #print(img)
-    #cv2.waitKey(0)
-    #print("返回结果为"+res)
     return json.dumps(res)
 
 @app.route("/",methods=['GET','POST'])
